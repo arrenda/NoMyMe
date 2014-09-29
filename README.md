@@ -1,4 +1,28 @@
 # TITULO PROYTECTO1
 
-##### Añadimos algo nuevo
-##### Añadimos mas cosas
+### General Description
+The application provides the user an unique experience when he comes to manage his own history on reading and viewing his favorites books, films and series.
+
+### Utilities
+- Dinamic BookMarks:  
+ Main tool of the application gives the user the chance to manage their daily reading and viewing records.
+Bookmarks on books,number of last seen chapter for each serie.
+Besides, user have the option to saving series, movies and books, watching to see in the future.
+
+- Suggestions about Similar Topics: 
+  Each time user saves a new book, movie or serie, the application will recommend similars, based on arguments and similar genres.
+
+- Rating: 
+  Once user finish the book, film or serie,he will have the chance to rate it, and it will be saved for future views.
+
+- Sharing & Social Network: 
+- Users:
+
+### Platforms/Compatibility
+
+
+### Designers & Developers
+
+- Jorgo Moratallo Nuñoz
+- Eduardo Pileño Merchat
+- Alejandro Rodriguez Renda
