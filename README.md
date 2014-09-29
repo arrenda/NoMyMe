@@ -16,6 +16,8 @@ Besides, user have the option to saving series, movies and books, watching to se
   Once user finish the book, film or serie,he will have the chance to rate it, and it will be saved for future views.
 
 - Sharing & Social Network: 
+  User can share his favorites to other users, on his friendlist, besides sharing it on social networks.
+
 - Users:
 
 ### Platforms/Compatibility
@@ -23,6 +25,6 @@ Besides, user have the option to saving series, movies and books, watching to se
 
 ### Designers & Developers
 
-- Jorgo Moratallo Nuñoz
+- Jorge Moratalla Nuñez
 - Eduardo Pileño Merchat
 - Alejandro Rodriguez Renda
