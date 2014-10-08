@@ -1,4 +1,4 @@
-# TITULO PROYTECTO1
+# MEMOTRON 3000
 
 ### General Description
 The application provides the user an unique experience when he comes to manage his own history on reading and viewing his favorites books, films and series.
