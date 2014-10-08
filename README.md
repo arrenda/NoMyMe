@@ -19,8 +19,11 @@ Besides, user have the option to saving series, movies and books, watching to se
   User can share his favorites to other users, on his friendlist, besides sharing it on social networks.
 
 - Users:
+  The aplication will provide a friendlist that show their conection status (online/offline).
 
 ### Platforms/Compatibility
+The aplication will be able on webs & mobile phones. In the future, it will have a desktop client.
+Also, the aplication could be synchronizes with social network & email accounts.
 
 
 ### Designers & Developers
