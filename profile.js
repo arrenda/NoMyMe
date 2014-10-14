@@ -48,19 +48,35 @@ Profile.prototype.getBook = function()
     return this._books;
 };
 
-Profile.prototype.setFilm = function(film)
+Profile.prototype.setFilm = function(name,state,time)
 {
-    this._films = film;
+    var film = {
+        _name : name,
+        _state : state,
+        _time : time
+    };
+    this._films.push(film);
 };
 
-Profile.prototype.setSerie = function(serie)
+Profile.prototype.setSerie = function(name,state,chapter)
 {
-    this._series = serie;
+    var serie = {
+        _name : name,
+        _state : state,
+        _chapter : chapter
+    };
+    this._series.push(serie);
+
 };
 
-Profile.prototype.setBook = function(book)
+Profile.prototype.setBook = function(name,state,page)
 {
-    this._books = book;
+    var book = {
+        _name : name,
+        _state : state,
+        _page : page
+    };
+    this._books.push(book);
 };
 
 Profile.prototype.checkPassword = function(password)
