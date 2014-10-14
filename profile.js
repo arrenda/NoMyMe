@@ -6,11 +6,11 @@
 
 
 function Profile(){
-    this._username;
-    this._passwd;
-    this._films = {};
-    this._series = {};
-    this._books = {};
+    this._username = '';
+    this._passwd = '';
+    this._films = [];
+    this._series = [];
+    this._books = [];
 }
 
 Profile.prototype.getUserName = function()
@@ -61,6 +61,11 @@ Profile.prototype.setSerie = function(serie)
 Profile.prototype.setBook = function(book)
 {
     this._books = book;
+};
+
+Profile.prototype.checkPassword = function(password)
+{
+    return this._passwd === password;
 };
 
 module.exports = {
