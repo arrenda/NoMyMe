@@ -84,6 +84,11 @@ Profile.prototype.checkPassword = function(password)
     return this._passwd === password;
 };
 
+Profile.prototype.setMedia = function(type, options)
+{
+    this[type].push(options);
+};
+
 module.exports = {
     create: function()
     {
