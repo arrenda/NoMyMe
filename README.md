@@ -29,5 +29,5 @@ Also, the aplication could be synchronizes with social network & email accounts.
 ### Designers & Developers
 
 - Jorge Moratalla Nuñez
-- Eduardo Pileño Merchat
+- Eduardo Pileño Merchan
 - Alejandro Rodriguez Renda
