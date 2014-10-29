@@ -18,13 +18,13 @@ and open the template in the editor.
     <link rel="import" href="bower_components/core-item/core-item.html">
     <link rel="import" href="bower_components/core-icon/core-icon.html">
     <link rel="import" href="bower_components/core-icons/core-icons.html">
+    <link rel="import" href="bower_components/core-transition/core-transition.html">
     
     <style>
       :host {
         position: absolute;
         width: 100%;
         height: 100%;
-        box-sizing: border-box;
       }
       #toolbar {
         right: 0px;
@@ -44,9 +44,20 @@ and open the template in the editor.
         margin: 0;
       }
       #button_menu{
-        width: 3%;
-        margin: 0;
-        padding: 0;
+      }
+      paper-tabs /deep/ #selectionBar {
+        background-color: black;
+      }
+      paper-tab /deep/ #ink {
+        color: white;
+      }
+      #submenu{
+        position: fixed;
+        top: 64px;
+        left: 0px;
+        width: 60%;
+        height: 100%;
+        background-color: gray;
       }
     </style>
   </head>
@@ -54,18 +65,25 @@ and open the template in the editor.
   <body>
     
     <core-toolbar id="toolbar">
-      <core-menu-button icon="menu" id="button_menu">
-        <core-item label="Settings"></core-item>
-        <core-item label="Dialog"></core-item>
-        <core-item label="Search"></core-item>
-      </core-menu-button>
+      <core-icon-button icon="menu" id="button_menu" onclick="showMenu()">
+      </core-icon-button>
       <paper-tabs selectedindex="0" id="tabs">
         <paper-tab id="tab_series" active>SERIES</paper-tab>
         <paper-tab id="tab_films">FILMS</paper-tab>
         <paper-tab id="tab_books">BOOKS</paper-tab>
       </paper-tabs>
     </core-toolbar>
+    <div id="submenu" hidden="true">
+      
+    </div>
   
     
   </body>
+  <script>
+    
+    function showMenu(){
+      document.getElementById('submenu').hidden = !document.getElementById('submenu').hidden;
+    }
+    
+  </script>  
 </html>
