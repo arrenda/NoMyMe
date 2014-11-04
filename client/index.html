@@ -15,6 +15,7 @@ and open the template in the editor.
     <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
     <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
     <link rel="import" href="bower_components/core-menu-button/core-menu-button.html">
+    <link rel="import" href="bower_components/core-menu/core-menu.html">
     <link rel="import" href="bower_components/core-item/core-item.html">
     <link rel="import" href="bower_components/core-icon/core-icon.html">
     <link rel="import" href="bower_components/core-icons/core-icons.html">
@@ -55,7 +56,7 @@ and open the template in the editor.
         position: fixed;
         top: 64px;
         left: 0px;
-        width: 60%;
+        width: 10%;
         height: 100%;
         background-color: gray;
       }
@@ -74,7 +75,11 @@ and open the template in the editor.
       </paper-tabs>
     </core-toolbar>
     <div id="submenu" hidden="true">
-      
+      <core-menu>
+        <core-item icon="perm-identity" label="Sign in"></core-item>
+        <core-item icon="settings" label="Settings"></core-item>
+        <core-item icon="folder-shared" label="Profile"></core-item>
+      </core-menu>
     </div>
   
     
