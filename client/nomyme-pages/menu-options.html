@@ -1,0 +1,99 @@
+<polymer-element name="menu-options">
+        <template>
+          <style>
+              .padre{
+                  word-spacing: -1px;
+                  font-size: 1px;
+                  letter-spacing: -1px;
+                  width: 400px;
+                  height: 2;
+              }
+              .List{
+                display: inline-block;
+                width: 49%;
+                height: 48%;
+                border: 5px solid black;
+                background-color: #00FF40;
+                color: black;
+                font-size: 30px;
+            }
+            .Ratting{
+                display: inline-block;
+                width: 49%;
+                height: 48%;
+                border: 5px solid black;
+                background: #F4FA58;
+                color: black;
+                font-size: 30px;
+            }
+            .Search{
+                display: inline-block;
+                width: 49%;
+                height: 48%;
+                border: 5px solid black;
+                background: #2E64FE;
+                color: black;
+                font-size: 30px;
+            }
+            .Suggestions{
+                display: inline-block;
+                width: 49%;
+                height: 48%;
+                border: 5px solid black;
+                background: #FE2E2E;
+                color: black;
+                font-size: 30px;
+            }
+            body{
+                overflow-y: hidden;
+            }
+            core-animated-pages {
+                height: 100%;
+                width: 100%;
+              }
+        </style>
+            <core-animated-pages on-transition="{{transition}}" selected="{{page}}" transitions="hero-transition slide-up slide-down cross-fade list-cascade" 
+                                 on-core-animated-pages-transition-end="{{complete}}">
+                <section>
+                    <div class="padre" cross-fade>
+                        <div class="List" hero-id="hero" hero  on-tap="{{transition}}">
+                            List
+                        </div>
+                        <div class="Suggestions">
+                            Suggestions
+                        </div>
+                        <div class="Search" layaout vertical on-tap="{{ transition }}">
+                            Search
+                        </div>
+                        <div class="Ratting">
+                            Ratting
+                        </div>
+                          
+                    </div>
+                </section>
+                <section layout vertical>
+                    <prueba-1></prueba-1>
+                </section>
+              <section>
+                <formulario-model layout vertical></formulario-model>
+              </section>
+            </core-animated-pages>
+        </template>
+      <script>
+
+    Polymer('menu-options',{
+
+      page: 0,
+
+      transition: function(e) {
+        if (this.page === 2) {
+          this.page = 0;
+        } else {
+          this.page += 1;
+        }
+      }
+    });
+
+  </script>
+</polymer-element>   
+  

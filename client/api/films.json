@@ -1,0 +1,39 @@
+[
+  {
+    "uid": 1,
+    "text" : "Sinopsis pelicula",
+    "name" : "Avatar",
+    "avatar" : "Images/avatar.jpg"
+  },
+  {
+    "uid": 2,
+    "text" : "Sinopsis pelicula",
+    "name" : "Thor",
+    "avatar" : "Images/thor.jpg"
+  },
+    {
+    "uid": 3,
+    "text" : "Sinopsis pelicula",
+    "name" : "Armagedon",
+    "avatar" : "Images/armagedon.jpg"
+  },
+  {
+    "uid": 4,
+    "text" : "Sinopsis pelicula",
+    "name" : "Django",
+    "avatar" : "Images/django.jpg"
+  },
+  {
+    "uid": 5,
+    "text" : "Sinopsis pelicula",
+    "name" : "El Hobbit",
+    "avatar" : "Images/hobbit.jpg"
+  },
+  {
+    "uid": 6,
+    "text" : "Sinopsis pelicula",
+    "name" : "El padrino",
+    "avatar" : "Images/padrino.jpg"
+  }
+]
+

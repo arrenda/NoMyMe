@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<polymer-element name="formulario-model" attributes="film">
+  <html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <template>
+         <style shim-shadowdom>
+
+        body {
+          font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+          font-size: 14px;
+          margin: 0;
+          padding: 24px;
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
+          -webkit-touch-callout: none;
+        }
+
+        section {
+          padding: 20px 0;
+        }
+
+        section > div {
+          padding: 14px;
+          font-size: 16px;
+        }
+
+        paper-input {
+          //width: 20%;
+        }
+
+        paper-input-decorator {
+          max-width: 80%;
+        }
+
+        paper-input.narrow {
+          width: 150px;
+        }
+
+        .custom /deep/ ::-webkit-input-placeholder {
+          color: #f4b400;
+        }
+
+        .custom /deep/ ::-moz-placeholder {
+          color: #f4b400;
+        }
+
+        .custom /deep/ :-ms-input-placeholder {
+          color: #f4b400;
+        }
+
+        .custom /deep/ .label-text,
+        .custom /deep/ .error {
+          color: #f4b400;
+        }
+
+        .custom /deep/ .unfocused-underline {
+          background-color: #f4b400;
+        }
+
+        .custom[focused] /deep/ .floated-label .label-text {
+          color: #0f9d58;
+        }
+
+        .custom /deep/ .focused-underline {
+          background-color: #0f9d58;
+        }
+
+        .custom /deep/ .cursor {
+          background-color: #1a237e;
+        }
+
+        .custom.invalid /deep/ .floated-label .label-text,
+        .custom /deep/ .error {
+          color: #f06292;
+        }
+
+        .custom.invalid /deep/ .focused-underline,
+        .custom.invalid /deep/ .cursor {
+          background-color: #f06292;
+        }
+
+        .custom {
+          color: #1a237e;
+        }
+          paper-button.colored {
+            color: #4285f4;
+        }
+        paper-button[raised].colored {
+      background: #4285f4;
+      color: #fff;
+    }
+  </style>
+
+    </head>
+    <body>
+    <media-model id="mediaModel"></media-model>
+        <div><h1>Film's Form</h1></div>
+        <paper-input id="filmInsert" label="Pelicula a insertar " floatingLabel></paper-input>
+        <br><paper-button raised class="colored" on-tap="{{insert}}">Enviar</paper-button>
+    </body>
+      </template>
+      <script>
+        
+        
+      Polymer('formulario-model',{
+           
+            insert: function(){
+            
+            this.film = {
+              type : 'film',
+              name : this.$.filmInsert.value,
+              desc : 'Pelicula'
+            };
+            console.log(this.film);  
+            
+            this.$.mediaModel.newMedia(JSON.stringify(this.film));
+            }
+          });
+    </script>
+    </polymer-element>
+</html>

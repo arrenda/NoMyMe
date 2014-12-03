@@ -1,0 +1,31 @@
+<polymer-element name="films-list" attributes="show">
+  <template>
+    <style>
+    :host {
+      display: block;
+      width: 100%;
+    }
+    post-card {
+      margin-bottom: 30px;
+    }
+    </style>
+
+    <films-service id="service" films="{{films}}">
+    </films-service>
+    
+    <div layout vertical center>
+
+      <template repeat="{{film in films}}">
+        <post-card>
+          <img src="{{film.avatar}}" width="70" height="70">
+          <h2>{{film.name}}</h2>
+          <p>{{film.text}}</p>
+        </post-card>
+      </template>
+      
+    </div>
+  </template>
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>

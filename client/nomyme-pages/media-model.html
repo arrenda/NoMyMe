@@ -1,0 +1,67 @@
+<polymer-element name="media-model">
+  <template>
+    <style>
+      :host {
+      }
+
+    </style>
+  </template>
+  <script>
+    (function() {
+			var base = '/media';
+			function defaultAjaxErrorHandler(xhr, err, desc) {
+				console.log(xhr, err, desc);
+				var errorToast = document.querySelector('#toast');
+				errorToast.text = '[' +xhr.status + '] ' + desc + ': ' + xhr.response;
+				errorToast.show();
+			}
+			function doAjax(options, success, error) {
+				options.type = options.type || 'GET';
+				options.url = base + (options.url || '');
+				options.dataType = options.dataType || 'json';
+				options.contentType = options.contentType || 'application/json; charset=UTF-8';
+				options.success = success;
+				options.error = (typeof error === 'function') ? error : defaultAjaxErrorHandler;
+
+				$.ajax(options);
+			}
+
+			var medias;
+
+			Polymer('media-model', {
+				created: function() {
+					if (!medias) {
+						doAjax({}, function(data) {
+							medias = data;
+							this.medias = medias;
+						}.bind(this));
+					}
+				},
+				newMedia: function(film) {
+          console.log("Pasa");
+					doAjax({type: 'POST',data:film}, function(film) {
+						this.medias.push(film);
+					}.bind(this));
+				},
+				destroyMedia: function(media) {
+					doAjax({type: 'DELETE', url: '/' + media._id, dataType: 'text'}, function(data) {
+						var i = this.medias.indexOf(media);
+						if (i >= 0) {
+							this.medias.splice(i, 1);
+						}
+					}.bind(this));
+				},
+				setMedia: function(media) {
+					var url = '/' + media._id + '/set';
+					var data = {
+						type: media.type,
+						name: media.name,
+            des: media.desc
+					};
+					doAjax({type: 'PUT', url: url, data: JSON.stringify(data)}, function(result) {
+					}.bind(this));
+				}
+			});
+		}());
+  </script>
+</polymer-element>

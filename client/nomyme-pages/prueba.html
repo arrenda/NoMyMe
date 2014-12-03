@@ -1,0 +1,38 @@
+<polymer-element name="prueba-1">
+  <template>
+    <style>
+    :host {
+      display: block;
+      width: 100%;
+       .top {
+        background-color: #ffff8d;
+      }
+
+      .bottom {
+        box-sizing: border-box;
+        position: relative;
+        height: 80px;
+        background-color: #ffeb3b;
+        padding: 24px;
+        color: #fff;
+        font-size: 32px;
+      }
+    }
+    </style>
+        <core-icon-button icon="arrow-back" role="img" on-tap="{{handleTransition}}"></core-icon-button>
+        <div class="top" hero-id="hero" hero flex layout horizontal center center-justified>
+            <films-list></films-list>
+        </div>                       
+  </template>   
+    <script>
+        Polymer({
+          handleFavorite: function(event, detail, sender) {
+            var post = sender.templateInstance.model.post;
+            this.$.service.setFavorite(post.uid, post.favorite);
+          },
+          handleTransition: function(){
+            this.fire('transition',{page: 2});
+          }
+        });
+    </script>
+</polymer-element>
